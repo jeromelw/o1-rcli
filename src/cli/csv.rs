@@ -1,27 +1,9 @@
+use std::fmt;
+use std::str::FromStr;
+
 use clap::Parser;
-use core::fmt;
-use std::{path::Path, str::FromStr};
 
-#[derive(Debug, Parser)]
-#[command(name = "rcli", version, author, about, long_about = None)]
-pub struct Opts {
-    #[command(subcommand)]
-    pub cmd: SubCommand,
-}
-
-#[derive(Debug, Parser)]
-pub enum SubCommand {
-    #[command(name = "csv", about = "Convert CSV to JSON.")]
-    Csv(CsvOpts),
-    #[command(name = "genpass", about = "Generate rand password")]
-    GenPass(GenpassOpts),
-}
-
-#[derive(Debug, Clone, Copy)]
-pub enum OutputFormat {
-    Json,
-    Yaml,
-}
+use super::verify_file_exists;
 
 #[derive(Debug, Parser)]
 pub struct CsvOpts {
@@ -41,30 +23,10 @@ pub struct CsvOpts {
     pub header: bool,
 }
 
-#[derive(Debug, Parser)]
-pub struct GenpassOpts {
-    #[arg(short, long, default_value_t = 16)]
-    pub length: u8,
-
-    #[arg(long, default_value_t = false)]
-    pub no_uppercase: bool,
-
-    #[arg(long, default_value_t = false)]
-    pub no_lowercace: bool,
-
-    #[arg(long, default_value_t = false)]
-    pub no_number: bool,
-
-    #[arg(long, default_value_t = false)]
-    pub no_symbol: bool,
-}
-
-fn verify_file_exists(filepath: &str) -> Result<String, &'static str> {
-    if Path::new(filepath).exists() {
-        Ok(filepath.into())
-    } else {
-        Err("File does not exists")
-    }
+#[derive(Debug, Clone, Copy)]
+pub enum OutputFormat {
+    Json,
+    Yaml,
 }
 
 fn parse_format(format: &str) -> Result<OutputFormat, anyhow::Error> {

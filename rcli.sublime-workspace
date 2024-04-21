@@ -1,0 +1,550 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tr",
+				"trim()"
+			],
+			[
+				"read",
+				"read_to_string (as Read)"
+			],
+			[
+				"m",
+				"match"
+			],
+			[
+				"std",
+				"stdin()"
+			],
+			[
+				"B",
+				"Base64Format"
+			],
+			[
+				"en",
+				"engine"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"Err",
+				"Err()"
+			],
+			[
+				"ass",
+				"assert_eq!(…)"
+			],
+			[
+				"P",
+				"path"
+			],
+			[
+				"op",
+				"Opts"
+			],
+			[
+				"ma",
+				"match"
+			],
+			[
+				"s",
+				"struct\tstruct … { … }"
+			],
+			[
+				"st",
+				"struct\tstruct … { … }"
+			],
+			[
+				"se",
+				"self::"
+			],
+			[
+				"l",
+				"len()"
+			],
+			[
+				"char",
+				"chars"
+			],
+			[
+				"no",
+				"no_symbol"
+			],
+			[
+				"pr",
+				"process_csv"
+			],
+			[
+				"c",
+				"chars"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"p",
+				"println!(…)"
+			],
+			[
+				"defa",
+				"default_value_t"
+			],
+			[
+				"de",
+				"default_value_t"
+			],
+			[
+				"Ou",
+				"OutputFormat::Yaml"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"im",
+				"impl-trait\timpl … for … { … }"
+			],
+			[
+				"Out",
+				"OutputFormat (use crate::opts::OutputFormat)"
+			],
+			[
+				"S",
+				"Some()"
+			],
+			[
+				"ERR",
+				"Error"
+			],
+			[
+				"map",
+				"map_err(…)"
+			],
+			[
+				"From",
+				"FromStr (use std::str::FromStr)"
+			],
+			[
+				"OU",
+				"OutputFormat::Json"
+			],
+			[
+				"O",
+				"OutputFormatter"
+			],
+			[
+				"F",
+				"From"
+			],
+			[
+				"cl",
+				"clone() (as Clone)"
+			],
+			[
+				"col",
+				"collect() (as Iterator)"
+			],
+			[
+				"i",
+				"iter()"
+			],
+			[
+				"re",
+				"reader"
+			],
+			[
+				"pro",
+				"process_csv(…) (use rcli::process_csv)"
+			],
+			[
+				"Ok",
+				"Ok\tOk(…)"
+			],
+			[
+				"R",
+				"Result<…>"
+			],
+			[
+				"Sun",
+				"SubCommand"
+			],
+			[
+				"r",
+				"ret"
+			],
+			[
+				"wi",
+				"with_capacity(…)"
+			],
+			[
+				"from",
+				"from_path"
+			],
+			[
+				"Csv",
+				"CsvOpts"
+			],
+			[
+				"Cs",
+				"CsvOpts"
+			],
+			[
+				"mat",
+				"match\tmatch … { … }"
+			],
+			[
+				"fi",
+				"filepath"
+			],
+			[
+				"file",
+				"File (use std::fs::File)"
+			],
+			[
+				"default",
+				"default_value_t"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"cache",
+				"Package Control: Clear Cache Directory"
+			],
+			[
+				"lsp",
+				"LSP-rust-analyzer: Reload Project"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"rustana",
+				"Preferences: LSP-rust-analyzer Settings"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"lsp pr",
+				"Preferences: LSP-rust-analyzer Settings"
+			],
+			[
+				"enable",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp a",
+				"Preferences: LSP-rust-analyzer Settings"
+			],
+			[
+				"project re",
+				"Project: Refresh Folders"
+			],
+			[
+				"lsp rust",
+				"Preferences: LSP-rust-analyzer Settings"
+			],
+			[
+				"lsp pre",
+				"Preferences: LSP Settings"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade All Packages"
+			],
+			[
+				"pacagelist",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"markdownp",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"mono",
+				"Monokai Pro: select theme"
+			],
+			[
+				"packeage in",
+				"Package Control: Advanced Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 202.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jerome/projects/rust_bootcamp/rcli",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process"
+	],
+	"file_history":
+	[
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/csv.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/rcli.sublime-project",
+		"/Users/jerome/projects/rust_bootcamp/rcli/.gitignore",
+		"/Users/jerome/Library/Application Support/Sublime Text/Packages/User/Theme - Monokai Pro.sublime-settings",
+		"/Users/jerome/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings",
+		"/Users/jerome/Library/Application Support/Sublime Text/Packages/User/MultiMarkdown.sublime-settings",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/base64.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/genpass.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/main.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/gen_pass.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/mod.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/lib.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/csv_convert.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/mod.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/b64.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/opts.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/opts.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/Cargo.toml",
+		"/Users/jerome/projects/rust_bootcamp/rcli/cliff.toml",
+		"/Users/jerome/projects/rust_bootcamp/rcli/README.md",
+		"/Users/jerome/.cargo/config",
+		"/Users/jerome/projects/quickreplace/quick.sublime-project",
+		"/Users/jerome/projects/quickreplace/src/main.rs",
+		"/Users/jerome/projects/quickreplace/README.md",
+		"/Users/jerome/projects/quickreplace/Cargo.toml",
+		"/Users/jerome/projects/mandelbrot/src/main.rs",
+		"/Users/jerome/projects/mandelbrot/Cargo.toml",
+		"/Users/jerome/projects/actix-gcd/src/main.rs",
+		"/Users/jerome/projects/actix-gcd/Cargo.toml",
+		"/Users/jerome/projects/aura/src/main.rs",
+		"/Users/jerome/.ssh/config",
+		"/Users/jerome/projects/hello_world/main.rs"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "rcli.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 199.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
