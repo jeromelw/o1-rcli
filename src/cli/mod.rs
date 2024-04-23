@@ -1,12 +1,16 @@
 mod base64;
 mod csv;
 mod genpass;
+mod text;
 
 use self::{csv::CsvOpts, genpass::GenpassOpts};
 use clap::Parser;
-use std::path::Path;
+use std::path::{Path, PathBuf};
 
-pub use self::{base64::Base64Format, base64::Base64SubCommand, csv::OutputFormat};
+pub use self::{
+    base64::Base64Format, base64::Base64SubCommand, csv::OutputFormat, text::SignatureFormat,
+    text::TextSubCommand,
+};
 
 #[derive(Debug, Parser)]
 #[command(name = "rcli", version, author, about, long_about = None)]
@@ -23,11 +27,22 @@ pub enum SubCommand {
     GenPass(GenpassOpts),
     #[command(subcommand)]
     Base64(Base64SubCommand),
+    #[command(subcommand)]
+    Text(TextSubCommand),
 }
 
 fn verify_file_exists(filepath: &str) -> Result<String, &'static str> {
     if filepath == "-" || Path::new(filepath).exists() {
         Ok(filepath.into())
+    } else {
+        Err("File does not exists")
+    }
+}
+
+fn verify_path(filepath: &str) -> Result<PathBuf, &'static str> {
+    let path = Path::new(filepath);
+    if path.exists() && path.is_dir() {
+        Ok(path.into())
     } else {
         Err("File does not exists")
     }

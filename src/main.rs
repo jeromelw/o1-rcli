@@ -1,8 +1,11 @@
+use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
 //rcli csv -i test.csv -d '|' -o output.json
 use clap::Parser;
+use rcli::get_content;
+use rcli::get_reader;
 use rcli::{
-    process_csv, process_decode, process_encode, process_genpass, Base64SubCommand, Opts,
-    SubCommand,
+    process_csv, process_decode, process_encode, process_generate, process_genpass, process_sign,
+    process_verify, Base64SubCommand, Opts, SubCommand, TextSubCommand,
 };
 
 fn main() -> anyhow::Result<()> {
@@ -31,6 +34,28 @@ fn main() -> anyhow::Result<()> {
             }
             Base64SubCommand::Decode(opts) => {
                 process_decode(&opts.input, opts.format)?;
+            }
+        },
+        SubCommand::Text(subcmd) => match subcmd {
+            TextSubCommand::Sign(opts) => {
+                let mut reader = get_reader(&opts.input)?;
+                let key = get_content(&opts.key)?;
+                let encode = process_sign(&mut reader, &key, opts.format)?;
+                println!("Signature result: {}", encode);
+            }
+            TextSubCommand::Verify(opts) => {
+                let mut reader = get_reader(&opts.input)?;
+                let key = get_content(&opts.key)?;
+                let decoded = URL_SAFE_NO_PAD.decode(&opts.sig)?;
+                let verified = process_verify(&mut reader, &key, &decoded, opts.format)?;
+                if verified {
+                    println!("Signature verified");
+                } else {
+                    println!("Signature not verified");
+                }
+            }
+            TextSubCommand::Generate(opts) => {
+                process_generate(opts.output, opts.format)?;
             }
         },
     }
