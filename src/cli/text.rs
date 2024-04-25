@@ -32,13 +32,13 @@ pub struct TextVerifyOpts {
     pub key: String,
     #[arg(short, long)]
     pub sig: String,
-    #[arg(short, long, value_parser = parse_signature_format)]
+    #[arg(long, value_parser = parse_signature_format)]
     pub format: SignatureFormat,
 }
 
 #[derive(Debug, Parser)]
 pub struct TextGenerateOpts {
-    #[arg(short, long, value_parser = parse_signature_format, default_value = "blake3")]
+    #[arg(long, value_parser = parse_signature_format, default_value = "blake3")]
     pub format: SignatureFormat,
     #[arg(short, long, value_parser = verify_path)]
     pub output: PathBuf,
