@@ -1,11 +1,10 @@
 ### Test http serve command
 
-GET http://localhost:8080/
+GET http://localhost:8080/Cargo.toml
 
 ### Test http serve command dirtory path
 
-
-GET http://localhost:8080/Cargo.toml
+GET http://localhost:8080/fixture
 
 ### Test http serve unknown path
 
@@ -14,3 +13,7 @@ Get http://localhost:8080/unknown
 ### Test http serve unreadable file
 
 GET http://localhost:8080/fixture/ed25519.sk
+
+### Test tower http serveDir
+
+GET http://localhost:8080/file/Cargo.toml
