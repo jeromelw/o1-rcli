@@ -4,8 +4,9 @@ use clap::Parser;
 use rcli::get_content;
 use rcli::get_reader;
 use rcli::{
-    process_csv, process_decode, process_encode, process_generate, process_genpass, process_sign,
-    process_verify, Base64SubCommand, Opts, SubCommand, TextSubCommand,
+    process_chacha_generate, process_csv, process_decode, process_decrypt, process_encode,
+    process_encrypt, process_generate, process_genpass, process_sign, process_verify,
+    Base64SubCommand, ChachaSubCommand, Opts, SubCommand, TextSubCommand,
 };
 
 fn main() -> anyhow::Result<()> {
@@ -56,6 +57,28 @@ fn main() -> anyhow::Result<()> {
             }
             TextSubCommand::Generate(opts) => {
                 process_generate(opts.output, opts.format)?;
+            }
+        },
+        SubCommand::Chacha(subcmd) => match subcmd {
+            ChachaSubCommand::Encrypt(opts) => {
+                let mut reader = get_reader(&opts.input)?;
+                let key = get_content(&opts.key)?;
+                let (ret, nonce) = process_encrypt(&mut reader, &key, opts.format)?;
+                let ret = URL_SAFE_NO_PAD.encode(ret);
+
+                let nonce = URL_SAFE_NO_PAD.encode(nonce);
+                println!("Encrypted: {}", ret);
+                println!("Nonce: {}", nonce);
+            }
+            ChachaSubCommand::Decrypt(opts) => {
+                let mut reader = get_reader(&opts.input)?;
+                let key = get_content(&opts.key)?;
+                let nonce = URL_SAFE_NO_PAD.decode(&opts.nonce)?;
+                let result = process_decrypt(&mut reader, &key, &nonce, opts.format)?;
+                println!("Decrypted: {:?}", String::from_utf8(result)?)
+            }
+            ChachaSubCommand::Generate(opts) => {
+                process_chacha_generate(opts.output, opts.format)?;
             }
         },
     }

@@ -1,4 +1,5 @@
 mod base64;
+mod chacha;
 mod csv;
 mod genpass;
 mod text;
@@ -8,8 +9,8 @@ use clap::Parser;
 use std::path::{Path, PathBuf};
 
 pub use self::{
-    base64::Base64Format, base64::Base64SubCommand, csv::OutputFormat, text::SignatureFormat,
-    text::TextSubCommand,
+    base64::Base64Format, base64::Base64SubCommand, chacha::ChachaFormat, chacha::ChachaSubCommand,
+    csv::OutputFormat, text::SignatureFormat, text::TextSubCommand,
 };
 
 #[derive(Debug, Parser)]
@@ -29,6 +30,8 @@ pub enum SubCommand {
     Base64(Base64SubCommand),
     #[command(subcommand, about = "Text signature")]
     Text(TextSubCommand),
+    #[command(subcommand, about = "Chacha20 encryption/decryption")]
+    Chacha(ChachaSubCommand),
 }
 
 fn verify_file_exists(filepath: &str) -> Result<String, &'static str> {
