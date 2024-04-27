@@ -1,0 +1,16 @@
+### Test http serve command
+
+GET http://localhost:8080/
+
+### Test http serve command dirtory path
+
+
+GET http://localhost:8080/Cargo.toml
+
+### Test http serve unknown path
+
+Get http://localhost:8080/unknown
+
+### Test http serve unreadable file
+
+GET http://localhost:8080/fixture/ed25519.sk

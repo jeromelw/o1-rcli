@@ -5,11 +5,14 @@ use rcli::get_content;
 use rcli::get_reader;
 use rcli::{
     process_chacha_generate, process_csv, process_decode, process_decrypt, process_encode,
-    process_encrypt, process_generate, process_genpass, process_sign, process_verify,
-    Base64SubCommand, ChachaSubCommand, Opts, SubCommand, TextSubCommand,
+    process_encrypt, process_generate, process_genpass, process_http_serve, process_sign,
+    process_verify, Base64SubCommand, ChachaSubCommand, HttpSubCommand, Opts, SubCommand,
+    TextSubCommand,
 };
 
-fn main() -> anyhow::Result<()> {
+#[tokio::main]
+async fn main() -> anyhow::Result<()> {
+    tracing_subscriber::fmt::init();
     let opts: Opts = Opts::parse();
     match opts.cmd {
         SubCommand::Csv(opts) => {
@@ -79,6 +82,11 @@ fn main() -> anyhow::Result<()> {
             }
             ChachaSubCommand::Generate(opts) => {
                 process_chacha_generate(opts.output, opts.format)?;
+            }
+        },
+        SubCommand::Http(subcmd) => match subcmd {
+            HttpSubCommand::Serve(opts) => {
+                process_http_serve(opts.dirtory, opts.port).await?;
             }
         },
     }
