@@ -2,6 +2,8 @@ use std::{fmt, str::FromStr};
 
 use clap::Parser;
 
+use crate::CmdExecutor;
+
 use super::verify_file_exists;
 
 #[derive(Debug, Parser)]
@@ -12,12 +14,38 @@ pub enum Base64SubCommand {
     Decode(Base64DecodeOpts),
 }
 
+impl CmdExecutor for Base64SubCommand {
+    async fn execute(self) -> anyhow::Result<()> {
+        match self {
+            Base64SubCommand::Encode(opts) => {
+                opts.execute().await?;
+            }
+            Base64SubCommand::Decode(opts) => {
+                opts.execute().await?;
+            }
+        }
+        Ok(())
+    }
+}
+
 #[derive(Debug, Parser)]
 pub struct Base64EncodeOpts {
     #[arg(short, long, value_parser = verify_file_exists, default_value = "-")]
     pub input: String,
     #[arg(short, long, value_parser = parse_base64_format, default_value = "standard")]
     pub format: Base64Format,
+}
+
+impl CmdExecutor for Base64EncodeOpts {
+    async fn execute(self) -> anyhow::Result<()> {
+        crate::process_encode(&self.input, self.format)
+    }
+}
+
+impl CmdExecutor for Base64DecodeOpts {
+    async fn execute(self) -> anyhow::Result<()> {
+        crate::process_decode(&self.input, self.format)
+    }
 }
 
 #[derive(Debug, Parser)]

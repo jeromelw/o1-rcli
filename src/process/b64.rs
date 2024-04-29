@@ -1,4 +1,4 @@
-use crate::{cli::Base64Format, utils::get_reader};
+use crate::{utils::get_reader, Base64Format};
 use anyhow::Result;
 use base64::{
     engine::general_purpose::STANDARD, engine::general_purpose::URL_SAFE_NO_PAD, Engine as _,

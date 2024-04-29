@@ -1,3 +1,9 @@
+use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
+
+use crate::{
+    get_content, get_reader, process_chacha_generate, process_decrypt, process_encrypt, CmdExecutor,
+};
+
 use super::{verify_file_exists, verify_path};
 use clap::Parser;
 use std::path::PathBuf;
@@ -13,6 +19,23 @@ pub enum ChachaSubCommand {
     Generate(GenerateOpts),
 }
 
+impl CmdExecutor for ChachaSubCommand {
+    async fn execute(self) -> anyhow::Result<()> {
+        match self {
+            ChachaSubCommand::Encrypt(opts) => {
+                opts.execute().await?;
+            }
+            ChachaSubCommand::Decrypt(opts) => {
+                opts.execute().await?;
+            }
+            ChachaSubCommand::Generate(opts) => {
+                opts.execute().await?;
+            }
+        }
+        Ok(())
+    }
+}
+
 #[derive(Debug, Parser)]
 pub struct EncryptOpts {
     #[arg(short, long, value_parser = verify_file_exists, default_value = "-")]
@@ -21,6 +44,20 @@ pub struct EncryptOpts {
     pub key: String,
     #[arg(short, long)]
     pub format: ChachaFormat,
+}
+
+impl CmdExecutor for EncryptOpts {
+    async fn execute(self) -> anyhow::Result<()> {
+        let mut reader = get_reader(&self.input)?;
+        let key = get_content(&self.key)?;
+        let (ret, nonce) = process_encrypt(&mut reader, &key, self.format)?;
+        let ret = URL_SAFE_NO_PAD.encode(ret);
+
+        let nonce = URL_SAFE_NO_PAD.encode(nonce);
+        println!("Encrypted: {}", ret);
+        println!("Nonce: {}", nonce);
+        Ok(())
+    }
 }
 
 #[derive(Debug, Parser)]
@@ -35,12 +72,29 @@ pub struct DecryptOpts {
     pub format: ChachaFormat,
 }
 
+impl CmdExecutor for DecryptOpts {
+    async fn execute(self) -> anyhow::Result<()> {
+        let mut reader = get_reader(&self.input)?;
+        let key = get_content(&self.key)?;
+        let nonce = URL_SAFE_NO_PAD.decode(&self.nonce)?;
+        let result = process_decrypt(&mut reader, &key, &nonce, self.format)?;
+        println!("Decrypted: {:?}", String::from_utf8(result)?);
+        Ok(())
+    }
+}
+
 #[derive(Debug, Parser)]
 pub struct GenerateOpts {
     #[arg(long)]
     pub format: ChachaFormat,
     #[arg(short, long, value_parser = verify_path)]
     pub output: PathBuf,
+}
+
+impl CmdExecutor for GenerateOpts {
+    async fn execute(self) -> anyhow::Result<()> {
+        process_chacha_generate(self.output, self.format)
+    }
 }
 
 #[derive(Debug, Clone, Copy)]

@@ -1,6 +1,9 @@
 use std::{fmt, path::PathBuf, str::FromStr};
 
+use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
 use clap::Parser;
+
+use crate::{get_content, get_reader, process_generate, process_sign, process_verify, CmdExecutor};
 
 use super::{verify_file_exists, verify_path};
 
@@ -14,6 +17,23 @@ pub enum TextSubCommand {
     Generate(TextGenerateOpts),
 }
 
+impl CmdExecutor for TextSubCommand {
+    async fn execute(self) -> anyhow::Result<()> {
+        match self {
+            TextSubCommand::Sign(opts) => {
+                opts.execute().await?;
+            }
+            TextSubCommand::Verify(opts) => {
+                opts.execute().await?;
+            }
+            TextSubCommand::Generate(opts) => {
+                opts.execute().await?;
+            }
+        }
+        Ok(())
+    }
+}
+
 #[derive(Debug, Parser)]
 pub struct TextSignOpts {
     #[arg(short, long, value_parser = verify_file_exists, default_value = "-")]
@@ -22,6 +42,16 @@ pub struct TextSignOpts {
     pub key: String,
     #[arg(short, long, value_parser = parse_signature_format)]
     pub format: SignatureFormat,
+}
+
+impl CmdExecutor for TextSignOpts {
+    async fn execute(self) -> anyhow::Result<()> {
+        let mut reader = get_reader(&self.input)?;
+        let key = get_content(&self.key)?;
+        let encode = process_sign(&mut reader, &key, self.format)?;
+        println!("Signature result: {}", encode);
+        Ok(())
+    }
 }
 
 #[derive(Debug, Parser)]
@@ -36,12 +66,33 @@ pub struct TextVerifyOpts {
     pub format: SignatureFormat,
 }
 
+impl CmdExecutor for TextVerifyOpts {
+    async fn execute(self) -> anyhow::Result<()> {
+        let mut reader = get_reader(&self.input)?;
+        let key = get_content(&self.key)?;
+        let decoded = URL_SAFE_NO_PAD.decode(&self.sig)?;
+        let verified = process_verify(&mut reader, &key, &decoded, self.format)?;
+        if verified {
+            println!("Signature verified");
+        } else {
+            println!("Signature not verified");
+        }
+        Ok(())
+    }
+}
+
 #[derive(Debug, Parser)]
 pub struct TextGenerateOpts {
     #[arg(long, value_parser = parse_signature_format, default_value = "blake3")]
     pub format: SignatureFormat,
     #[arg(short, long, value_parser = verify_path)]
     pub output: PathBuf,
+}
+
+impl CmdExecutor for TextGenerateOpts {
+    async fn execute(self) -> anyhow::Result<()> {
+        process_generate(self.output, self.format)
+    }
 }
 
 fn parse_signature_format(format: &str) -> Result<SignatureFormat, anyhow::Error> {

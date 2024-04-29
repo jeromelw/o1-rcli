@@ -5,14 +5,12 @@ mod genpass;
 mod http_serve;
 mod text;
 
-use self::{csv::CsvOpts, genpass::GenpassOpts};
+use crate::CmdExecutor;
+
 use clap::Parser;
 use std::path::{Path, PathBuf};
 
-pub use self::{
-    base64::Base64Format, base64::Base64SubCommand, chacha::ChachaFormat, chacha::ChachaSubCommand,
-    csv::OutputFormat, http_serve::HttpSubCommand, text::SignatureFormat, text::TextSubCommand,
-};
+pub use self::{base64::*, chacha::*, csv::*, genpass::*, http_serve::*, text::*};
 
 #[derive(Debug, Parser)]
 #[command(name = "rcli", version, author, about, long_about = None)]
@@ -35,6 +33,19 @@ pub enum SubCommand {
     Chacha(ChachaSubCommand),
     #[command(subcommand, about = "HTTP server")]
     Http(HttpSubCommand),
+}
+
+impl CmdExecutor for SubCommand {
+    async fn execute(self) -> anyhow::Result<()> {
+        match self {
+            SubCommand::Csv(opts) => opts.execute().await,
+            SubCommand::GenPass(opts) => opts.execute().await,
+            SubCommand::Base64(cmd) => cmd.execute().await,
+            SubCommand::Text(cmd) => cmd.execute().await,
+            SubCommand::Chacha(cmd) => cmd.execute().await,
+            SubCommand::Http(cmd) => cmd.execute().await,
+        }
+    }
 }
 
 fn verify_file_exists(filepath: &str) -> Result<String, &'static str> {

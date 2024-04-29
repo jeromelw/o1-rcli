@@ -1,4 +1,4 @@
-use crate::cli::ChachaFormat;
+use crate::ChachaFormat;
 use anyhow::Result;
 use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
 use chacha20poly1305::{
