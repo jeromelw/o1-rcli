@@ -2,12 +2,15 @@ use std::{fmt, path::PathBuf, str::FromStr};
 
 use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
 use clap::Parser;
+use enum_dispatch::enum_dispatch;
 
 use crate::{get_content, get_reader, process_generate, process_sign, process_verify, CmdExecutor};
 
 use super::{verify_file_exists, verify_path};
 
 #[derive(Debug, Parser)]
+#[enum_dispatch(CmdExecutor)]
+
 pub enum TextSubCommand {
     #[command(about = "Signature input by private key")]
     Sign(TextSignOpts),
@@ -15,23 +18,6 @@ pub enum TextSubCommand {
     Verify(TextVerifyOpts),
     #[command(about = "Generate key")]
     Generate(TextGenerateOpts),
-}
-
-impl CmdExecutor for TextSubCommand {
-    async fn execute(self) -> anyhow::Result<()> {
-        match self {
-            TextSubCommand::Sign(opts) => {
-                opts.execute().await?;
-            }
-            TextSubCommand::Verify(opts) => {
-                opts.execute().await?;
-            }
-            TextSubCommand::Generate(opts) => {
-                opts.execute().await?;
-            }
-        }
-        Ok(())
-    }
 }
 
 #[derive(Debug, Parser)]

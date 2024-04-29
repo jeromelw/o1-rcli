@@ -1,4 +1,5 @@
 use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine as _};
+use enum_dispatch::enum_dispatch;
 
 use crate::{
     get_content, get_reader, process_chacha_generate, process_decrypt, process_encrypt, CmdExecutor,
@@ -10,6 +11,7 @@ use std::path::PathBuf;
 use std::{fmt, str::FromStr};
 
 #[derive(Debug, Parser)]
+#[enum_dispatch(CmdExecutor)]
 pub enum ChachaSubCommand {
     #[command(name = "encrypt", about = "Encrypt by chacha stream cipher")]
     Encrypt(EncryptOpts),
@@ -17,23 +19,6 @@ pub enum ChachaSubCommand {
     Decrypt(DecryptOpts),
     #[command(name = "generate", about = "Generate chacha stream cipher key")]
     Generate(GenerateOpts),
-}
-
-impl CmdExecutor for ChachaSubCommand {
-    async fn execute(self) -> anyhow::Result<()> {
-        match self {
-            ChachaSubCommand::Encrypt(opts) => {
-                opts.execute().await?;
-            }
-            ChachaSubCommand::Decrypt(opts) => {
-                opts.execute().await?;
-            }
-            ChachaSubCommand::Generate(opts) => {
-                opts.execute().await?;
-            }
-        }
-        Ok(())
-    }
 }
 
 #[derive(Debug, Parser)]

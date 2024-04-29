@@ -1,26 +1,17 @@
 use std::path::PathBuf;
 
 use clap::Parser;
+use enum_dispatch::enum_dispatch;
 
 use crate::CmdExecutor;
 
 use super::verify_path;
 
 #[derive(Debug, Parser)]
+#[enum_dispatch(CmdExecutor)]
 pub enum HttpSubCommand {
     #[command(about = "Signature input by private key")]
     Serve(HttpServeOpts),
-}
-
-impl CmdExecutor for HttpSubCommand {
-    async fn execute(self) -> anyhow::Result<()> {
-        match self {
-            HttpSubCommand::Serve(opts) => {
-                opts.execute().await?;
-            }
-        }
-        Ok(())
-    }
 }
 
 #[derive(Debug, Parser)]
