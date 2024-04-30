@@ -4,16 +4,140 @@
 		"selected_items":
 		[
 			[
+				"all",
+				"allow(…)"
+			],
+			[
+				"Cha",
+				"ChachaSubCommand"
+			],
+			[
+				"Te",
+				"TextVerifyOpts"
+			],
+			[
+				"T",
+				"TextSignOpts"
+			],
+			[
+				"m",
+				"match"
+			],
+			[
+				"p",
+				"push_str(…)"
+			],
+			[
+				"inf",
+				"info!(…)"
+			],
+			[
+				"pu",
+				"push_str(…)"
+			],
+			[
+				"push",
+				"push_str(…)"
+			],
+			[
+				"co",
+				"continue"
+			],
+			[
+				"ma",
+				"match"
+			],
+			[
+				"en",
+				"entries"
+			],
+			[
+				"wil",
+				"while-let\twhile let … = … { … }"
+			],
+			[
+				"to",
+				"tokio"
+			],
+			[
+				"is",
+				"is_dir"
+			],
+			[
+				"Path",
+				"PathBuf"
+			],
+			[
+				"A",
+				"AppState"
+			],
+			[
+				"App",
+				"AppState"
+			],
+			[
+				"Sta",
+				"StatusCode"
+			],
+			[
+				"mat",
+				"match"
+			],
+			[
+				"de",
+				"default_value"
+			],
+			[
+				"as",
+				"as_bytes()"
+			],
+			[
+				"re",
+				"ret"
+			],
+			[
+				"pr",
+				"process_encrypt"
+			],
+			[
+				"in",
+				"into() (as Into)"
+			],
+			[
+				"matc",
+				"match"
+			],
+			[
+				"prin",
+				"println!(…)"
+			],
+			[
+				"ass",
+				"assert_eq"
+			],
+			[
+				"r",
+				"ret"
+			],
+			[
+				"a",
+				"assert!(…)"
+			],
+			[
+				"Text",
+				"TextVerifier"
+			],
+			[
+				"Veri",
+				"VerifyingKey (use ed25519_dalek::VerifyingKey)"
+			],
+			[
 				"tr",
 				"trim()"
 			],
 			[
 				"read",
 				"read_to_string (as Read)"
-			],
-			[
-				"m",
-				"match"
 			],
 			[
 				"std",
@@ -24,20 +148,8 @@
 				"Base64Format"
 			],
 			[
-				"en",
-				"engine"
-			],
-			[
-				"in",
-				"input"
-			],
-			[
 				"Err",
 				"Err()"
-			],
-			[
-				"ass",
-				"assert_eq!(…)"
 			],
 			[
 				"P",
@@ -46,10 +158,6 @@
 			[
 				"op",
 				"Opts"
-			],
-			[
-				"ma",
-				"match"
 			],
 			[
 				"s",
@@ -76,10 +184,6 @@
 				"no_symbol"
 			],
 			[
-				"pr",
-				"process_csv"
-			],
-			[
 				"c",
 				"chars"
 			],
@@ -88,15 +192,7 @@
 				"password"
 			],
 			[
-				"p",
-				"println!(…)"
-			],
-			[
 				"defa",
-				"default_value_t"
-			],
-			[
-				"de",
 				"default_value_t"
 			],
 			[
@@ -156,10 +252,6 @@
 				"iter()"
 			],
 			[
-				"re",
-				"reader"
-			],
-			[
 				"pro",
 				"process_csv(…) (use rcli::process_csv)"
 			],
@@ -174,10 +266,6 @@
 			[
 				"Sun",
 				"SubCommand"
-			],
-			[
-				"r",
-				"ret"
 			],
 			[
 				"wi",
@@ -196,10 +284,6 @@
 				"CsvOpts"
 			],
 			[
-				"mat",
-				"match\tmatch … { … }"
-			],
-			[
 				"fi",
 				"filepath"
 			],
@@ -215,6 +299,369 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/lib.rs",
+			"settings":
+			{
+				"buffer_size": 244,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAHQAAAAAAAAAdQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdAAAAAAAAAB0AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"paste",
+					null,
+					"AQAAAHUAAAAAAAAAhQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdQAAAAAAAAB1AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "use enum_dispatch::enum_dispatch;\n",
+								"range":
+								{
+									"end":
+									{
+										"character": 0,
+										"line": 5
+									},
+									"start":
+									{
+										"character": 0,
+										"line": 5
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": 2
+					},
+					"AQAAADIAAAAAAAAAVAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/cli/chacha.rs",
+			"settings":
+			{
+				"buffer_size": 3801,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAEsBAAAAAAAATAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASwEAAAAAAABLAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"paste",
+					null,
+					"AQAAAEwBAAAAAAAAXAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATAEAAAAAAABMAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"paste",
+					null,
+					"AgAAAEwBAAAAAAAAaQEAAAAAAAAAAAAAaQEAAAAAAABpAQAAAAAAABAAAAAjW2VudW1fZGlzcGF0Y2hd",
+					"AQAAAAAAAAABAAAATAEAAAAAAABcAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"paste",
+					null,
+					"AgAAAFwBAAAAAAAAZwEAAAAAAAAAAAAAZwEAAAAAAABnAQAAAAAAAAsAAABLbm9iQ29udHJvbA",
+					"AQAAAAAAAAABAAAAXAEAAAAAAABnAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					31,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "\nuse enum_dispatch::enum_dispatch;",
+								"range":
+								{
+									"end":
+									{
+										"character": 68,
+										"line": 0
+									},
+									"start":
+									{
+										"character": 68,
+										"line": 0
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": 6
+					},
+					"AQAAAEQAAAAAAAAAZgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWAEAAAAAAABYAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					36,
+					4,
+					"left_delete",
+					null,
+					"BAAAAOMCAAAAAAAA4wIAAAAAAADCAQAAbXBsIENtZEV4ZWN1dG9yIGZvciBDaGFjaGFTdWJDb21tYW5kIHsKICAgIGFzeW5jIGZuIGV4ZWN1dGUoc2VsZikgLT4gYW55aG93OjpSZXN1bHQ8KCk+IHsKICAgICAgICBtYXRjaCBzZWxmIHsKICAgICAgICAgICAgQ2hhY2hhU3ViQ29tbWFuZDo6RW5jcnlwdChvcHRzKSA9PiB7CiAgICAgICAgICAgICAgICBvcHRzLmV4ZWN1dGUoKS5hd2FpdD87CiAgICAgICAgICAgIH0KICAgICAgICAgICAgQ2hhY2hhU3ViQ29tbWFuZDo6RGVjcnlwdChvcHRzKSA9PiB7CiAgICAgICAgICAgICAgICBvcHRzLmV4ZWN1dGUoKS5hd2FpdD87CiAgICAgICAgICAgIH0KICAgICAgICAgICAgQ2hhY2hhU3ViQ29tbWFuZDo6R2VuZXJhdGUob3B0cykgPT4gewogICAgICAgICAgICAgICAgb3B0cy5leGVjdXRlKCkuYXdhaXQ/OwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIE9rKCgpKQogICAgfQp94gIAAAAAAADiAgAAAAAAAAEAAABp4QIAAAAAAADhAgAAAAAAAAEAAAAK4AIAAAAAAADgAgAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAApQQAAAAAAADjAgAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/cli/genpass.rs",
+			"settings":
+			{
+				"buffer_size": 737,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/cli/base64.rs",
+			"settings":
+			{
+				"buffer_size": 2231,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAIMAAAAAAAAAhAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwAAAAAAAACDAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"copilot_accept_completion",
+					null,
+					"AQAAAIQAAAAAAAAAoQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhAAAAAAAAACEAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "\nuse enum_dispatch::enum_dispatch;",
+								"range":
+								{
+									"end":
+									{
+										"character": 17,
+										"line": 2
+									},
+									"start":
+									{
+										"character": 17,
+										"line": 2
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": 4
+					},
+					"AQAAADAAAAAAAAAAUgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjAAAAAAAAACMAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					2,
+					"left_delete",
+					null,
+					"AgAAAKUBAAAAAAAApQEAAAAAAABbAQAACmltcGwgQ21kRXhlY3V0b3IgZm9yIEJhc2U2NFN1YkNvbW1hbmQgewogICAgYXN5bmMgZm4gZXhlY3V0ZShzZWxmKSAtPiBhbnlob3c6OlJlc3VsdDwoKT4gewogICAgICAgIG1hdGNoIHNlbGYgewogICAgICAgICAgICBCYXNlNjRTdWJDb21tYW5kOjpFbmNvZGUob3B0cykgPT4gewogICAgICAgICAgICAgICAgb3B0cy5leGVjdXRlKCkuYXdhaXQ/OwogICAgICAgICAgICB9CiAgICAgICAgICAgIEJhc2U2NFN1YkNvbW1hbmQ6OkRlY29kZShvcHRzKSA9PiB7CiAgICAgICAgICAgICAgICBvcHRzLmV4ZWN1dGUoKS5hd2FpdD87CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgT2soKCkpCiAgICB9Cn2kAQAAAAAAAKQBAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAApQEAAAAAAAAAAwAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/cli/http_serve.rs",
+			"settings":
+			{
+				"buffer_size": 656,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAHYAAAAAAAAAdwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgAAAAAAAAB2AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"copilot_accept_completion",
+					null,
+					"AQAAAHcAAAAAAAAAlAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdwAAAAAAAAB3AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAQBAAAAAAAABAEAAAAAAADxAAAACmltcGwgQ21kRXhlY3V0b3IgZm9yIEh0dHBTdWJDb21tYW5kIHsKICAgIGFzeW5jIGZuIGV4ZWN1dGUoc2VsZikgLT4gYW55aG93OjpSZXN1bHQ8KCk+IHsKICAgICAgICBtYXRjaCBzZWxmIHsKICAgICAgICAgICAgSHR0cFN1YkNvbW1hbmQ6OlNlcnZlKG9wdHMpID0+IHsKICAgICAgICAgICAgICAgIG9wdHMuZXhlY3V0ZSgpLmF3YWl0PzsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICBPaygoKSkKICAgIH0KfQ",
+					"AQAAAAAAAAABAAAA9QEAAAAAAAAEAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "\nuse enum_dispatch::enum_dispatch;",
+								"range":
+								{
+									"end":
+									{
+										"character": 17,
+										"line": 2
+									},
+									"start":
+									{
+										"character": 17,
+										"line": 2
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": 3
+					},
+					"AQAAACoAAAAAAAAATAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwAAAAAAAACDAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"revert",
+					null,
+					"AgAAAAAAAAAAAAAAAAAAAAAAAACRAgAAdXNlIHN0ZDo6cGF0aDo6UGF0aEJ1ZjsKCnVzZSBjbGFwOjpQYXJzZXI7CnVzZSBlbnVtX2Rpc3BhdGNoOjplbnVtX2Rpc3BhdGNoOwoKdXNlIGNyYXRlOjpDbWRFeGVjdXRvcjsKCnVzZSBzdXBlcjo6dmVyaWZ5X3BhdGg7CgojW2Rlcml2ZShEZWJ1ZywgUGFyc2VyKV0KI1tlbnVtX2Rpc3BhdGNoKENtZEV4ZWN1dG9yKV0KcHViIGVudW0gSHR0cFN1YkNvbW1hbmQgewogICAgI1tjb21tYW5kKGFib3V0ID0gIlNpZ25hdHVyZSBpbnB1dCBieSBwcml2YXRlIGtleSIpXQogICAgU2VydmUoSHR0cFNlcnZlT3B0cyksCn0KCgojW2Rlcml2ZShEZWJ1ZywgUGFyc2VyKV0KcHViIHN0cnVjdCBIdHRwU2VydmVPcHRzIHsKICAgICNbYXJnKHNob3J0LCBsb25nLCB2YWx1ZV9wYXJzZXIgPSB2ZXJpZnlfcGF0aCldCiAgICBwdWIgZGlydG9yeTogUGF0aEJ1ZiwKICAgICNbYXJnKHNob3J0LCBsb25nLCBkZWZhdWx0X3ZhbHVlX3QgPSA4MDgwKV0KICAgIHB1YiBwb3J0OiB1MTYsCn0KCmltcGwgQ21kRXhlY3V0b3IgZm9yIEh0dHBTZXJ2ZU9wdHMgewogICAgYXN5bmMgZm4gZXhlY3V0ZShzZWxmKSAtPiBhbnlob3c6OlJlc3VsdDwoKT4gewogICAgICAgIGNyYXRlOjpwcm9jZXNzX2h0dHBfc2VydmUoc2VsZi5kaXJ0b3J5LCBzZWxmLnBvcnQpLmF3YWl0CiAgICB9Cn0KAAAAAAAAAACQAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApQAAAAAAAAClAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/cli/text.rs",
+			"settings":
+			{
+				"buffer_size": 3519,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAADEBAAAAAAAAMgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"copilot_accept_completion",
+					null,
+					"AQAAADIBAAAAAAAAUAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMgEAAAAAAAAyAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							{
+								"newText": "\nuse enum_dispatch::enum_dispatch;",
+								"range":
+								{
+									"end":
+									{
+										"character": 17,
+										"line": 3
+									},
+									"start":
+									{
+										"character": 17,
+										"line": 3
+									}
+								}
+							}
+						],
+						"process_placeholders": false,
+						"required_view_version": 2
+					},
+					"AQAAAIQAAAAAAAAApgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPgEAAAAAAAA+AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					2,
+					"left_delete",
+					null,
+					"AgAAAH4CAAAAAAAAfgIAAAAAAAC4AQAACmltcGwgQ21kRXhlY3V0b3IgZm9yIFRleHRTdWJDb21tYW5kIHsKICAgIGFzeW5jIGZuIGV4ZWN1dGUoc2VsZikgLT4gYW55aG93OjpSZXN1bHQ8KCk+IHsKICAgICAgICBtYXRjaCBzZWxmIHsKICAgICAgICAgICAgVGV4dFN1YkNvbW1hbmQ6OlNpZ24ob3B0cykgPT4gewogICAgICAgICAgICAgICAgb3B0cy5leGVjdXRlKCkuYXdhaXQ/OwogICAgICAgICAgICB9CiAgICAgICAgICAgIFRleHRTdWJDb21tYW5kOjpWZXJpZnkob3B0cykgPT4gewogICAgICAgICAgICAgICAgb3B0cy5leGVjdXRlKCkuYXdhaXQ/OwogICAgICAgICAgICB9CiAgICAgICAgICAgIFRleHRTdWJDb21tYW5kOjpHZW5lcmF0ZShvcHRzKSA9PiB7CiAgICAgICAgICAgICAgICBvcHRzLmV4ZWN1dGUoKS5hd2FpdD87CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgT2soKCkpCiAgICB9Cn19AgAAAAAAAH0CAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAAfgIAAAAAAAA2BAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -227,6 +674,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"Rest",
+				"REST: Send request"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
 			[
 				"cache",
 				"Package Control: Clear Cache Directory"
@@ -373,31 +828,41 @@
 	"expanded_folders":
 	[
 		"/Users/jerome/projects/rust_bootcamp/rcli",
+		"/Users/jerome/projects/rust_bootcamp/rcli/fixture",
 		"/Users/jerome/projects/rust_bootcamp/rcli/src",
 		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli",
 		"/Users/jerome/projects/rust_bootcamp/rcli/src/process"
 	],
 	"file_history":
 	[
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/lib.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/main.rs",
 		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/csv.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/genpass.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/chacha.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/http_serve.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/http_serve.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/b64.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/mod.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/text.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/mod.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/chacha.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/csv_convert.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/gen_pass.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/base64.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/text.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/src/utils.rs",
+		"/Users/jerome/projects/rust_bootcamp/rcli/Cargo.toml",
+		"/Users/jerome/projects/rust_bootcamp/rcli/test.rest",
+		"/Users/jerome/.cargo/registry/src/index.crates.io-6f17d22bba15001f/axum-0.7.5/src/extract/path/mod.rs",
 		"/Users/jerome/projects/rust_bootcamp/rcli/rcli.sublime-project",
 		"/Users/jerome/projects/rust_bootcamp/rcli/.gitignore",
 		"/Users/jerome/Library/Application Support/Sublime Text/Packages/User/Theme - Monokai Pro.sublime-settings",
 		"/Users/jerome/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings",
 		"/Users/jerome/Library/Application Support/Sublime Text/Packages/User/MultiMarkdown.sublime-settings",
-		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/base64.rs",
-		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/genpass.rs",
-		"/Users/jerome/projects/rust_bootcamp/rcli/src/main.rs",
-		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/gen_pass.rs",
-		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/mod.rs",
-		"/Users/jerome/projects/rust_bootcamp/rcli/src/lib.rs",
-		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/csv_convert.rs",
-		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/mod.rs",
-		"/Users/jerome/projects/rust_bootcamp/rcli/src/process/b64.rs",
 		"/Users/jerome/projects/rust_bootcamp/rcli/src/process.rs",
 		"/Users/jerome/projects/rust_bootcamp/rcli/src/cli/opts.rs",
 		"/Users/jerome/projects/rust_bootcamp/rcli/src/opts.rs",
-		"/Users/jerome/projects/rust_bootcamp/rcli/Cargo.toml",
 		"/Users/jerome/projects/rust_bootcamp/rcli/cliff.toml",
 		"/Users/jerome/projects/rust_bootcamp/rcli/README.md",
 		"/Users/jerome/.cargo/config",
@@ -450,6 +915,444 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/lib.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".:",
+									"selector": "source.rust"
+								},
+								{
+									"characters": ":.'(",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "rust-analyzer"
+								}
+							],
+							"copilot.completion._is_modified": false,
+							"copilot.completion._is_saving": false,
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_waiting_completion": false,
+							"lsp_active": true,
+							"lsp_uri": "file:///Users/jerome/projects/rust_bootcamp/rcli/src/lib.rs",
+							"show_definitions": false,
+							"syntax": "Packages/Rust Enhanced/RustEnhanced.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/cli/chacha.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3801,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								736,
+								736
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".:",
+									"selector": "source.rust"
+								},
+								{
+									"characters": ":.'(",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "rust-analyzer"
+								}
+							],
+							"copilot.completion._is_modified": false,
+							"copilot.completion._is_saving": false,
+							"copilot.completion.completion_index": 0,
+							"copilot.completion.completion_style": "popup",
+							"copilot.completion.completions":
+							[
+								{
+									"displayText": ")]\n",
+									"docVersion": 6,
+									"point": 359,
+									"position":
+									{
+										"character": 27,
+										"line": 12
+									},
+									"range":
+									{
+										"end":
+										{
+											"character": 29,
+											"line": 12
+										},
+										"start":
+										{
+											"character": 0,
+											"line": 12
+										}
+									},
+									"region":
+									[
+										332,
+										361
+									],
+									"text": "#[enum_dispatch(CmdExecutor)]\n",
+									"uuid": "2dc93b32-ef3c-4071-886c-813abdd7d80f"
+								}
+							],
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_waiting_completion": false,
+							"lsp_active": true,
+							"lsp_uri": "file:///Users/jerome/projects/rust_bootcamp/rcli/src/cli/chacha.rs",
+							"show_definitions": false,
+							"syntax": "Packages/Rust Enhanced/RustEnhanced.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/cli/genpass.rs",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 737,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".:",
+									"selector": "source.rust"
+								},
+								{
+									"characters": ":.'(",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "rust-analyzer"
+								}
+							],
+							"copilot.completion.is_visible": false,
+							"lsp_active": true,
+							"lsp_uri": "file:///Users/jerome/projects/rust_bootcamp/rcli/src/cli/genpass.rs",
+							"show_definitions": false,
+							"syntax": "Packages/Rust Enhanced/RustEnhanced.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/cli/base64.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".:",
+									"selector": "source.rust"
+								},
+								{
+									"characters": ":.'(",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "rust-analyzer"
+								}
+							],
+							"copilot.completion._is_modified": false,
+							"copilot.completion._is_saving": false,
+							"copilot.completion.completion_index": 0,
+							"copilot.completion.completion_style": "popup",
+							"copilot.completion.completions":
+							[
+								{
+									"displayText": "#[enum_dispatch(CmdExecutor)]",
+									"docVersion": 3,
+									"point": 132,
+									"position":
+									{
+										"character": 0,
+										"line": 9
+									},
+									"range":
+									{
+										"end":
+										{
+											"character": 0,
+											"line": 9
+										},
+										"start":
+										{
+											"character": 0,
+											"line": 9
+										}
+									},
+									"region":
+									[
+										132,
+										132
+									],
+									"text": "#[enum_dispatch(CmdExecutor)]",
+									"uuid": "1763caa8-f27b-4883-9cd2-db94ea98a1c1"
+								}
+							],
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_waiting_completion": false,
+							"lsp_active": true,
+							"lsp_uri": "file:///Users/jerome/projects/rust_bootcamp/rcli/src/cli/base64.rs",
+							"show_definitions": false,
+							"syntax": "Packages/Rust Enhanced/RustEnhanced.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/cli/http_serve.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".:",
+									"selector": "source.rust"
+								},
+								{
+									"characters": ":.'(",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "rust-analyzer"
+								}
+							],
+							"copilot.completion._is_modified": false,
+							"copilot.completion._is_saving": false,
+							"copilot.completion.completion_index": 0,
+							"copilot.completion.completion_style": "popup",
+							"copilot.completion.completions":
+							[
+								{
+									"displayText": "#[enum_dispatch(CmdExecutor)]",
+									"docVersion": 1,
+									"point": 119,
+									"position":
+									{
+										"character": 0,
+										"line": 9
+									},
+									"range":
+									{
+										"end":
+										{
+											"character": 0,
+											"line": 9
+										},
+										"start":
+										{
+											"character": 0,
+											"line": 9
+										}
+									},
+									"region":
+									[
+										119,
+										119
+									],
+									"text": "#[enum_dispatch(CmdExecutor)]",
+									"uuid": "92b6e08b-aac2-4a20-8a89-f1463a64c13f"
+								}
+							],
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_waiting_completion": false,
+							"lsp_active": true,
+							"lsp_uri": "file:///Users/jerome/projects/rust_bootcamp/rcli/src/cli/http_serve.rs",
+							"show_definitions": false,
+							"syntax": "Packages/Rust Enhanced/RustEnhanced.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/cli/text.rs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3519,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								637,
+								637
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".:",
+									"selector": "source.rust"
+								},
+								{
+									"characters": ":.'(",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "rust-analyzer"
+								}
+							],
+							"copilot.completion._is_modified": false,
+							"copilot.completion._is_saving": false,
+							"copilot.completion.completion_index": 0,
+							"copilot.completion.completion_style": "popup",
+							"copilot.completion.completions":
+							[
+								{
+									"displayText": "#[enum_dispatch(CmdExecutor)]\n",
+									"docVersion": 1,
+									"point": 306,
+									"position":
+									{
+										"character": 0,
+										"line": 10
+									},
+									"range":
+									{
+										"end":
+										{
+											"character": 0,
+											"line": 10
+										},
+										"start":
+										{
+											"character": 0,
+											"line": 10
+										}
+									},
+									"region":
+									[
+										306,
+										306
+									],
+									"text": "#[enum_dispatch(CmdExecutor)]\n",
+									"uuid": "3aa403a9-15aa-4acf-8acf-dfb5a26e89a4"
+								}
+							],
+							"copilot.completion.is_visible": false,
+							"copilot.completion.is_waiting_completion": false,
+							"lsp_active": true,
+							"lsp_uri": "file:///Users/jerome/projects/rust_bootcamp/rcli/src/cli/text.rs",
+							"show_definitions": false,
+							"syntax": "Packages/Rust Enhanced/RustEnhanced.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				}
 			]
 		}
 	],

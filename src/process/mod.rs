@@ -3,6 +3,7 @@ mod chacha;
 mod csv_convert;
 mod gen_pass;
 mod http_serve;
+mod jwt;
 mod text;
 
 pub use b64::process_decode;
@@ -11,6 +12,8 @@ pub use chacha::{process_chacha_generate, process_decrypt, process_encrypt};
 pub use csv_convert::process_csv;
 pub use gen_pass::process_genpass;
 pub use http_serve::process_http_serve;
+pub use jwt::process_jwt_sign;
+pub use jwt::process_jwt_verify;
 pub use text::process_generate;
 pub use text::process_sign;
 pub use text::process_verify;

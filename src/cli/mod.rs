@@ -3,6 +3,7 @@ mod chacha;
 mod csv;
 mod genpass;
 mod http_serve;
+mod jwt;
 mod text;
 
 use crate::CmdExecutor;
@@ -10,7 +11,7 @@ use crate::CmdExecutor;
 use clap::Parser;
 use std::path::{Path, PathBuf};
 
-pub use self::{base64::*, chacha::*, csv::*, genpass::*, http_serve::*, text::*};
+pub use self::{base64::*, chacha::*, csv::*, genpass::*, http_serve::*, jwt::*, text::*};
 
 #[derive(Debug, Parser)]
 #[command(name = "rcli", version, author, about, long_about = None)]
@@ -33,6 +34,8 @@ pub enum SubCommand {
     Chacha(ChachaSubCommand),
     #[command(subcommand, about = "HTTP server")]
     Http(HttpSubCommand),
+    #[command(subcommand, about = "JWT sign/verify")]
+    Jwt(JwtSubCommand),
 }
 
 impl CmdExecutor for SubCommand {
@@ -44,6 +47,7 @@ impl CmdExecutor for SubCommand {
             SubCommand::Text(cmd) => cmd.execute().await,
             SubCommand::Chacha(cmd) => cmd.execute().await,
             SubCommand::Http(cmd) => cmd.execute().await,
+            SubCommand::Jwt(cmd) => cmd.execute().await,
         }
     }
 }

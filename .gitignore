@@ -1,3 +1,4 @@
 /target
 output.*
 rcli.sublime-project
+*.sublime-workspace
